@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    tools:context="com.example.dani.marvelpedia.MainActivity">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:paddingTop="30dp"
+        android:layout_alignParentTop ="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/shield_logo" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_centerInParent="true"
+        android:id="@+id/text_user"
+        android:hint="@string/user">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/textColor"
+            android:maxLength="10"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_user"
+        android:layout_centerInParent="true"
+        app:passwordToggleContentDescription="hola"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPrimaryDark"
+        android:id="@+id/text_pass"
+        android:hint="@string/password">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/textColor"
+            android:maxLength="8"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_pass"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:textColor="@color/textColor"
+        android:background="@color/colorPrimary"
+        android:text="@string/send"
+        android:id="@+id/enter" />
+</RelativeLayout>

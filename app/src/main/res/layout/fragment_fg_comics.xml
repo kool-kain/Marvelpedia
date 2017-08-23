@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.FgComics"
+    android:background="@color/windowBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/text_comic"
+            android:hint="@string/enter_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/comic"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:maxLength="15" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="@color/textColor"
+            android:background="@color/colorPrimary"
+            android:text="@string/search"
+            android:id="@+id/search_comic"
+            android:layout_alignRight="@+id/text_comic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_comic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_comic"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/windowBackground">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/comic_card"
+            android:text="@string/comic_card"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <LinearLayout
+            android:layout_below="@id/comic_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/img_det_comic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/shield_logo"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/comic_det_descrip"
+                android:textColor="@color/textColor2"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:ellipsize="end"
+                android:maxLines="15"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/characters"
+            android:textAlignment="center"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/font_size_medium"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_det_chars"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="2dp">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

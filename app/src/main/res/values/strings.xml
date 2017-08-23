@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Marvelpedia</string>
+    <string name="send">Enviar</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="enter_name">Introduce un nombre</string>
+    <string name="enter_title">Introduce un título</string>
+    <string name="search">BUSCAR</string>
+    <string name="char_card">Ficha Personaje</string>
+    <string name="comic_card">Ficha Comic</string>
+    <string name="characters">Personajes</string>
+    <string name="comics">Comics</string>
+</resources>
